@@ -52,7 +52,9 @@ if __name__ == "__main__":
     lyrics = get_lyrics().upper()
 
     for video_id,video_title in get_viddys():
-        video_title = html.unescape(video_title).upper().strip("!.")
+        video_title = html.unescape(video_title).upper().strip("!. ")
+        if video_title == "OLD":
+            continue
         if video_title in replacements:
             video_title = replacements[video_title]
         if video_title in lyrics:

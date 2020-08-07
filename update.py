@@ -74,7 +74,7 @@ if __name__ == "__main__":
     %s
 </body>
 </html>
-    """ % lyrics.replace("\n","<br/>")
+    """ % lyrics.replace("IN THE SHAPE","\nIN THE SHAPE").replace("\n","<br/>")
 
     with open(TARGET_PATH,"w") as y:
         print(html,file=y)
